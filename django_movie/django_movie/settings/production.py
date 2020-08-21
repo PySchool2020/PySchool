@@ -39,7 +39,6 @@ DATABASES['default'].update(db)
 ALLOWED_HOSTS = ["pyschool.herokuapp.com"]
 # ALLOWED_HOSTS = ["*"]
 '---------------------------------------------------------------------'
-SECRET_KEY = SECRET_KEY
 
 # Application definition
 
@@ -219,10 +218,7 @@ CKEDITOR_CONFIGS = {
 "recaptcha"
 RECAPTCHA_PUBLIC_KEY = os.environ.get('RECAPTCHA_PUBLIC_KEY')
 RECAPTCHA_PRIVATE_KEY = os.environ.get('RECAPTCHA_PRIVATE_KEY')
-RECAPTCHA_PUBLIC_KEY = RECAPTCHA_PUBLIC_KEY
-RECAPTCHA_PRIVATE_KEY = RECAPTCHA_PRIVATE_KEY
 RECAPTCHA_DEFAULT_ACTION = 'generic'
 RECAPTCHA_SCORE_THRESHOLD = 0.5
 
 SITE_ID = 1
-
