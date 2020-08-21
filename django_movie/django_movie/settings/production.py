@@ -140,7 +140,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_DIR = os.path.join(BASE_DIR, 'static')
+# STATIC_DIR = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
@@ -217,11 +217,6 @@ CKEDITOR_CONFIGS = {
 }
 
 "recaptcha"
-# https://github.com/kbytesys/django-recaptcha3
-# https://developers.google.com/recaptcha/docs/v3
-# https://www.google.com/recaptcha/admin/create
-# https://www.google.com/recaptcha/admin/site/431287773/setup
-
 RECAPTCHA_PUBLIC_KEY = os.environ.get('RECAPTCHA_PUBLIC_KEY')
 RECAPTCHA_PRIVATE_KEY = os.environ.get('RECAPTCHA_PRIVATE_KEY')
 RECAPTCHA_PUBLIC_KEY = RECAPTCHA_PUBLIC_KEY
@@ -230,10 +225,4 @@ RECAPTCHA_DEFAULT_ACTION = 'generic'
 RECAPTCHA_SCORE_THRESHOLD = 0.5
 
 SITE_ID = 1
-'''
-try:
-    from .local_settings import *
-except ImportError:
-    from .prod_settings import *
-'''
-# https://github.com/DJWOMS/django_movie
+
