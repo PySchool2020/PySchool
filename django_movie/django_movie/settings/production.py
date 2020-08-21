@@ -221,8 +221,11 @@ CKEDITOR_CONFIGS = {
 # https://developers.google.com/recaptcha/docs/v3
 # https://www.google.com/recaptcha/admin/create
 # https://www.google.com/recaptcha/admin/site/431287773/setup
-RECAPTCHA_PUBLIC_KEY = "6Lfd7bQZAAAAAC1GDemaGZ1Y5cstJleehXWr_fDk"
-RECAPTCHA_PRIVATE_KEY = "6Lfd7bQZAAAAAKYI_cFcHZGncwoCrUF6yOKlRVEM"
+
+RECAPTCHA_PUBLIC_KEY = os.environ.get('RECAPTCHA_PUBLIC_KEY')
+RECAPTCHA_PRIVATE_KEY = os.environ.get('RECAPTCHA_PRIVATE_KEY')
+RECAPTCHA_PUBLIC_KEY = RECAPTCHA_PUBLIC_KEY
+RECAPTCHA_PRIVATE_KEY = RECAPTCHA_PRIVATE_KEY
 RECAPTCHA_DEFAULT_ACTION = 'generic'
 RECAPTCHA_SCORE_THRESHOLD = 0.5
 
