@@ -35,7 +35,9 @@ DATABASES = {
 }
 db = dj_database_url.config()
 DATABASES['default'].update(db)
+
 ALLOWED_HOSTS = ["pyschool.herokuapp.com"]
+# ALLOWED_HOSTS = ["*"]
 '---------------------------------------------------------------------'
 SECRET_KEY = SECRET_KEY
 
@@ -146,8 +148,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-
 CKEDITOR_UPLOAD_PATH = "uploads/"
 
 CKEDITOR_CONFIGS = {
