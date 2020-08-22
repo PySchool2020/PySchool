@@ -1,8 +1,8 @@
-from django import forms
 from django.contrib import admin
 from embed_video.admin import AdminVideoMixin
 from django.utils.safestring import mark_safe
-from ckeditor_uploader.widgets import CKEditorUploadingWidget
+# from django import forms
+# from ckeditor_uploader.widgets import CKEditorUploadingWidget
 
 from .models import Category, Genre, Movie, MovieShots, Actor, Rating, RatingStar, Reviews, Videos
 
@@ -15,13 +15,13 @@ admin.site.register(Videos, MyModelAdmin)
 # admin.site.register(Videos)
 
 
-class MovieAdminForm(forms.ModelForm):
-    """Форма с виджетом ckeditor"""
-    description = forms.CharField(label="Описание", widget=CKEditorUploadingWidget())
-
-    class Meta:
-        model = Movie
-        fields = '__all__'
+# class MovieAdminForm(forms.ModelForm):
+#     """Форма с виджетом ckeditor"""
+#     description = forms.CharField(label="Описание", widget=CKEditorUploadingWidget())
+#
+#     class Meta:
+#         model = Movie
+#         fields = '__all__'
 
 
 @admin.register(Category)
@@ -60,7 +60,7 @@ class MovieAdmin(admin.ModelAdmin):
     save_as = True
     list_editable = ("draft",)
     actions = ["publish", "unpublish"]
-    form = MovieAdminForm
+    # form = MovieAdminForm
     readonly_fields = ("get_image",)
     fieldsets = (
         (None, {
