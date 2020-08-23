@@ -1,5 +1,5 @@
 {% extends 'movies/base.html' %}
-{% load movie_tag %}
+{% load static movie_tag %}
 {% block title %} {{ movie.title }} {% endblock title %}
 {% block header %} bg1 {% endblock header %}
 {% block movie %}
@@ -47,7 +47,7 @@
             {% for movie in movie_list %}
                 <div class="col-md-4">
                     <div class="figure text-center mt-md-4">
-                        <img src="{{ movie.poster.url }}" class="figure-img img-fluid img-thumbnail" alt="">
+                        <img src="{% static 'images/' %}{{movie.poster}}" class="figure-img img-fluid img-thumbnail" alt="">
                         <div class="figure-caption">
                             <h4 class="mt-md-4">
                                 {% if user.is_authenticated %}
