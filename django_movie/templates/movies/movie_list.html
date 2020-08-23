@@ -3,7 +3,7 @@
 {% block title %} {{ movie.title }} {% endblock title %}
 {% block header %} bg1 {% endblock header %}
 {% block movie %}
-    <div class="col-md-9">
+    <div class="col-md-9 order-first order-lg-2">
         <div id="carouselExampleIndicators" class="carousel slide row" data-ride="carousel" style="background: #44475a;">
           <ol class="carousel-indicators">
           {% for _ in view.get_poster %}
