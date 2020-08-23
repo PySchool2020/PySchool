@@ -13,7 +13,7 @@
           <div class="carousel-inner col-xl-3 col-md-4 p-1">
           {% for movie in view.get_poster %}
             <div class="carousel-item {% if forloop.counter == 1 %}active{% endif %}">
-              <img src="/media/{{ movie.poster }}" height="234">
+              <img src="{% static 'images/' %}{{movie.poster}}" height="234">
             </div>
           {% endfor %}
           </div>
